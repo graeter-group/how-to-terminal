@@ -1,0 +1,36 @@
+---
+title: "Wait, you can do that in a terminal?!"
+date: June 08, 2022
+author: Jannik & Camilo
+institute: Heidelberg Institute for Theoretical Studies
+format:
+  revealjs: 
+    # title-slide-attributes:
+    #   data-background-image: ./www/helix-wide.png
+    #   data-background-color: white
+    #   data-background-size: contain
+    #   data-background-position: bottom
+    citations-hover: true
+    reference-links: false
+    progress: true
+    slide-number: true
+    chalkboard: 
+      buttons: true
+    multiplex: false
+    logo: ./www/hits-logo.png
+    theme: [default, www/hits.scss]
+    css: ./www/styles.css
+    footer: |
+      <https://github.com/hits-mbm-dev/how-to-terminal>
+favicon: ./www/hits-logo.png
+bibliography: ./references.bib
+nocite: ""
+
+---
+
+# Introduction
+
+## Hello World
+
+
+
