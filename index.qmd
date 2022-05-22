@@ -25,12 +25,43 @@ format:
 favicon: ./www/hits-logo.png
 bibliography: ./references.bib
 nocite: ""
+engine: knitr
+execute:
+  echo: true
 
 ---
 
 # Introduction
 
-## Hello World
+## Why ...
+
+... do you have to get familiar with the terminal?
+
+## Agenda
+
+### Jannik
+
+- dotfiles: make yourself at home
+- `tmux`
+  - sessions, windows, splits
+  - mouse support
+  - nerdfonts
+- `neo(vim)`
+- aliases
+- `tldr`
+- combine interactivity with reproducibility for simulation setups
+
+### Camilo
+
+- handle pdb/gro/gromacs files
+- magic with `grep`, `awk`, `cat`, etc.
+
+# Demo
+
+## Tmux
+
+`tmux -f /dev/null`
+
 
 
 

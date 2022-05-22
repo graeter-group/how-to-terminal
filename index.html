@@ -335,8 +335,40 @@
 <h1>Introduction</h1>
 
 </section>
-<section id="hello-world" class="slide level2">
-<h2>Hello World</h2>
+<section id="why" class="slide level2">
+<h2>Why …</h2>
+<p>… do you have to get familiar with the terminal?</p>
+</section>
+<section id="agenda" class="slide level2">
+<h2>Agenda</h2>
+<h3 id="jannik">Jannik</h3>
+<ul>
+<li>dotfiles: make yourself at home</li>
+<li><code>tmux</code>
+<ul>
+<li>sessions, windows, splits</li>
+<li>mouse support</li>
+<li>nerdfonts</li>
+</ul></li>
+<li><code>neo(vim)</code></li>
+<li>aliases</li>
+<li><code>tldr</code></li>
+<li>combine interactivity with reproducibility for simulation setups</li>
+</ul>
+<h3 id="camilo">Camilo</h3>
+<ul>
+<li>handle pdb/gro/gromacs files</li>
+<li>magic with <code>grep</code>, <code>awk</code>, <code>cat</code>, etc.</li>
+</ul>
+</section></section>
+<section>
+<section id="demo" class="title-slide slide level1 center">
+<h1>Demo</h1>
+
+</section>
+<section id="tmux" class="slide level2">
+<h2>Tmux</h2>
+<p><code>tmux -f /dev/null</code></p>
 
 <img src="./www/hits-logo.png" class="slide-logo r-stretch"><div class="footer footer-default">
 <p><a href="https://github.com/hits-mbm-dev/how-to-terminal" class="uri">https://github.com/hits-mbm-dev/how-to-terminal</a></p>
@@ -555,6 +587,48 @@
         ]
       });
     </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        function fireSlideChanged(previousSlide, currentSlide) {
+
+          // dispatch for htmlwidgets
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for reveal
+        if (window.Reveal) {
+          window.Reveal.addEventListener("slidechanged", function(event) {
+            fireSlideChanged(event.previousSlide, event.currentSlide);
+          });
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
