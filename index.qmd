@@ -37,6 +37,16 @@ execute:
 
 ... do you have to get familiar with the terminal?
 
+## Examples
+
+```bash
+cat index.qmd
+```
+
+```{bash}
+cat index.qmd
+```
+
 ## Agenda
 
 ### Jannik
@@ -55,6 +65,7 @@ execute:
 
 - handle pdb/gro/gromacs files
 - magic with `grep`, `awk`, `cat`, etc.
+- imagemagick
 
 # Demo
 
@@ -63,5 +74,10 @@ execute:
 `tmux -f /dev/null`
 
 
+# Resources
 
+
+## Resources
+
+- <https://datascienceatthecommandline.com/2e/>
 
