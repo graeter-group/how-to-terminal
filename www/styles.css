@@ -1,0 +1,13 @@
+.flex {
+  display: flex;
+  /* height: 500px; */
+  flex-wrap: wrap;
+}
+
+/* .flex p { */
+/*   max-width: 30%; */
+/* } */
+
+.fr {
+  float: right;
+}

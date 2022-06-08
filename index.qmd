@@ -31,35 +31,42 @@ execute:
 
 ---
 
-# Introduction
+# Why
 
 ## Why ...
 
 ... do you have to get familiar with the terminal?
 
-## Examples
-
-```bash
-cat index.qmd
-```
-
-```{bash}
-cat index.qmd
-```
+::: {.incremental}
+- Speed
+  - for your brain
+  - and your code
+- Power
+- Remote working
+- Feel like a hacker when you don't need the mouse
+:::
 
 ## Agenda
 
+::: {.columns}
+::: {.column width="50%"}
+
 ### Jannik
 
+- terminals on our workstations
 - dotfiles: make yourself at home
+  - `~/.alias`
+  - `~/.config`
 - `tmux`
   - sessions, windows, splits
   - mouse support
-  - nerdfonts
 - `neo(vim)`
-- aliases
-- `tldr`
+  - basics
+  - fancy stuff
 - combine interactivity with reproducibility for simulation setups
+
+:::
+::: {.column width="50%"}
 
 ### Camilo
 
@@ -67,17 +74,107 @@ cat index.qmd
 - magic with `grep`, `awk`, `cat`, etc.
 - imagemagick
 
-# Demo
+:::
+:::
 
-## Tmux
+# Demo: `tmux`
 
-`tmux -f /dev/null`
+# Demo: `nvim`
 
+# ✨ Shell Magic ✨
+
+## `echo`, `cat`, `>` and `>>`,
+
+```{bash}
+echo 'hello'
+```
+
+```{bash}
+cat ./data/collagen.pdb | head
+```
+
+```bash
+cat ./data/collagen.pdb > ./data/newfile.pdb
+echo 'new final line' >> ./data/newfile.pdb
+```
+
+```{bash}
+echo -e 'Hello\n'
+```
+
+## Variables and `'` vs `"`
+
+```{bash}
+x='world'
+echo 'Hello $x'
+echo "Hello $x"
+```
+
+## Examples
+
+```{bash}
+head ./data/collagen.pdb
+```
+
+```{bash}
+head ./data/conf.gro
+```
+
+## Examples
+
+```{bash}
+cat ./data/collagen.pdb | grep 'C   ' | head -3
+```
+
+```{bash}
+cat ./data/collagen.pdb | grep 'C   ' | wc -l
+```
+
+## Examples
+
+```{bash}
+tldr cut
+```
+
+## Examples
+
+```{bash}
+cat ./data/collagen.pdb | tr -s ' ' | head -3
+```
+
+```{bash}
+cat ./data/collagen.pdb | tr -s ' ' | cut -d' ' -f3 | head -3
+```
 
 # Resources
 
+## Books and other resources
 
-## Resources
+::: {.columns}
+::: {.column width="50%"}
+- [Data Science at the Command Line](https://datascienceatthecommandline.com/2e/)
+- [The Missing Semester](https://missing.csail.mit.edu/)
+:::
+::: {.column width="50%"}
+:::flex
+![](./img/2022-06-08-09-54-21.png){width=40%}
 
-- <https://datascienceatthecommandline.com/2e/>
+[Slides: [github.com/hits-mbm-dev/how-to-terminal](https:/github.com/hits-mbm-dev/how-to-terminal)]{#qrcode}
+:::
+:::
+:::
+
+```{=html}
+<style>
+figcaption {
+    text-align: center;
+}
+</style>
+<script src="./www/qrcode.min.js"></script>
+<script type="text/javascript">
+let elem = document.getElementById("qrcode")
+new QRCode(elem, "https:/github.com/hits-mbm-dev/how-to-terminal");
+</script>
+```
+
 

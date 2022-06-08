@@ -394,149 +394,251 @@
 </section>
 
 <section>
-<section id="introduction" class="title-slide slide level1 center">
-<h1>Introduction</h1>
+<section id="why" class="title-slide slide level1 center">
+<h1>Why</h1>
 
 </section>
-<section id="why" class="slide level2">
+<section id="why-1" class="slide level2">
 <h2>Why …</h2>
 <p>… do you have to get familiar with the terminal?</p>
-</section>
-<section id="examples" class="slide level2">
-<h2>Examples</h2>
-<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">cat</span> index.qmd</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1"></a><span class="fu">cat</span> index.qmd</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>---
-title: "Wait, you can do that in a terminal?!"
-date: June 08, 2022
-author: Jannik &amp; Camilo
-institute: Heidelberg Institute for Theoretical Studies
-format:
-  revealjs: 
-    # title-slide-attributes:
-    #   data-background-image: ./www/helix-wide.png
-    #   data-background-color: white
-    #   data-background-size: contain
-    #   data-background-position: bottom
-    citations-hover: true
-    reference-links: false
-    progress: true
-    slide-number: true
-    chalkboard: 
-      buttons: true
-    multiplex: false
-    logo: ./www/hits-logo.png
-    theme: [default, www/hits.scss]
-    css: ./www/styles.css
-    footer: |
-      &lt;https://github.com/hits-mbm-dev/how-to-terminal&gt;
-favicon: ./www/hits-logo.png
-bibliography: ./references.bib
-nocite: ""
-engine: knitr
-execute:
-  echo: true
-
----
-
-# Introduction
-
-## Why ...
-
-... do you have to get familiar with the terminal?
-
-## Examples
-
-```bash
-cat index.qmd
-```
-
-```{bash}
-cat index.qmd
-```
-
-## Agenda
-
-### Jannik
-
-- dotfiles: make yourself at home
-- `tmux`
-  - sessions, windows, splits
-  - mouse support
-  - nerdfonts
-- `neo(vim)`
-- aliases
-- `tldr`
-- combine interactivity with reproducibility for simulation setups
-
-### Camilo
-
-- handle pdb/gro/gromacs files
-- magic with `grep`, `awk`, `cat`, etc.
-- imagemagick
-
-# Demo
-
-## Tmux
-
-`tmux -f /dev/null`
-
-
-# Resources
-
-
-## Resources
-
-- &lt;https://datascienceatthecommandline.com/2e/&gt;</code></pre>
-</div>
+<div>
+<ul>
+<li class="fragment">Speed
+<ul>
+<li class="fragment">for your brain</li>
+<li class="fragment">and your code</li>
+</ul></li>
+<li class="fragment">Power</li>
+<li class="fragment">Remote working</li>
+<li class="fragment">Feel like a hacker when you don’t need the mouse</li>
+</ul>
 </div>
 </section>
 <section id="agenda" class="slide level2">
 <h2>Agenda</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
 <h3 id="jannik">Jannik</h3>
 <ul>
-<li>dotfiles: make yourself at home</li>
+<li>terminals on our workstations</li>
+<li>dotfiles: make yourself at home
+<ul>
+<li><code>~/.alias</code></li>
+<li><code>~/.config</code></li>
+</ul></li>
 <li><code>tmux</code>
 <ul>
 <li>sessions, windows, splits</li>
 <li>mouse support</li>
-<li>nerdfonts</li>
 </ul></li>
-<li><code>neo(vim)</code></li>
-<li>aliases</li>
-<li><code>tldr</code></li>
+<li><code>neo(vim)</code>
+<ul>
+<li>basics</li>
+<li>fancy stuff</li>
+</ul></li>
 <li>combine interactivity with reproducibility for simulation setups</li>
 </ul>
+</div><div class="column" style="width:50%;">
 <h3 id="camilo">Camilo</h3>
 <ul>
 <li>handle pdb/gro/gromacs files</li>
 <li>magic with <code>grep</code>, <code>awk</code>, <code>cat</code>, etc.</li>
 <li>imagemagick</li>
 </ul>
+</div>
+</div>
 </section></section>
-<section>
-<section id="demo" class="title-slide slide level1 center">
-<h1>Demo</h1>
+<section id="demo-tmux" class="title-slide slide level1 center">
+<h1>Demo: <code>tmux</code></h1>
 
 </section>
-<section id="tmux" class="slide level2">
-<h2>Tmux</h2>
-<p><code>tmux -f /dev/null</code></p>
+
+<section id="demo-nvim" class="title-slide slide level1 center">
+<h1>Demo: <code>nvim</code></h1>
+
+</section>
+
+<section>
+<section id="shell-magic" class="title-slide slide level1 center">
+<h1>✨ Shell Magic ✨</h1>
+
+</section>
+<section id="echo-cat-and" class="slide level2">
+<h2><code>echo</code>, <code>cat</code>, <code>&gt;</code> and <code>&gt;&gt;</code>,</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1"></a><span class="bu">echo</span> <span class="st">'hello'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>hello</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1"></a><span class="fu">cat</span> ./data/collagen.pdb <span class="kw">|</span> <span class="fu">head</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>ATOM      1  C   ACE A 182      17.346  20.931 523.990  1.00  0.00           C  
+ATOM      2  O   ACE A 182      16.682  21.494 523.109  1.00  0.00           O  
+ATOM      3  CH3 ACE A 182      18.396  19.900 523.635  1.00  0.00           C  
+ATOM      4 1HH3 ACE A 182      19.153  20.344 523.005  1.00  0.00           H  
+ATOM      5 2HH3 ACE A 182      18.865  19.526 524.533  1.00  0.00           H  
+ATOM      6 3HH3 ACE A 182      17.940  19.075 523.108  1.00  0.00           H  
+ATOM      7  N   GLY A 183      17.140  21.228 525.228  1.00184.59           N  
+ATOM      8  CA  GLY A 183      16.134  22.217 525.581  0.00185.07           C  
+ATOM      9  C   GLY A 183      16.525  23.179 526.689  1.00182.47           C  
+ATOM     10  O   GLY A 183      17.709  23.403 526.924  1.00179.64           O  </code></pre>
+</div>
+</div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1"></a><span class="fu">cat</span> ./data/collagen.pdb <span class="op">&gt;</span> ./data/newfile.pdb</span>
+<span id="cb5-2"><a href="#cb5-2"></a><span class="bu">echo</span> <span class="st">'new final line'</span> <span class="op">&gt;&gt;</span> ./data/newfile.pdb</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1"></a><span class="bu">echo</span> <span class="at">-e</span> <span class="st">'Hello\n'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Hello</code></pre>
+</div>
+</div>
+</section>
+<section id="variables-and-vs" class="slide level2">
+<h2>Variables and <code>'</code> vs <code>"</code></h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1"></a><span class="va">x</span><span class="op">=</span><span class="st">'world'</span></span>
+<span id="cb8-2"><a href="#cb8-2"></a><span class="bu">echo</span> <span class="st">'Hello $x'</span></span>
+<span id="cb8-3"><a href="#cb8-3"></a><span class="bu">echo</span> <span class="st">"Hello </span><span class="va">$x</span><span class="st">"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Hello $x
+Hello world</code></pre>
+</div>
+</div>
+</section>
+<section id="examples" class="slide level2">
+<h2>Examples</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1"></a><span class="fu">head</span> ./data/collagen.pdb</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>ATOM      1  C   ACE A 182      17.346  20.931 523.990  1.00  0.00           C  
+ATOM      2  O   ACE A 182      16.682  21.494 523.109  1.00  0.00           O  
+ATOM      3  CH3 ACE A 182      18.396  19.900 523.635  1.00  0.00           C  
+ATOM      4 1HH3 ACE A 182      19.153  20.344 523.005  1.00  0.00           H  
+ATOM      5 2HH3 ACE A 182      18.865  19.526 524.533  1.00  0.00           H  
+ATOM      6 3HH3 ACE A 182      17.940  19.075 523.108  1.00  0.00           H  
+ATOM      7  N   GLY A 183      17.140  21.228 525.228  1.00184.59           N  
+ATOM      8  CA  GLY A 183      16.134  22.217 525.581  0.00185.07           C  
+ATOM      9  C   GLY A 183      16.525  23.179 526.689  1.00182.47           C  
+ATOM     10  O   GLY A 183      17.709  23.403 526.924  1.00179.64           O  </code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1"></a><span class="fu">head</span> ./data/conf.gro</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>GROwing Monsters And Cloning Shrimps
+323674
+  182ACE   HH31    1   1.915   2.034  52.300
+  182ACE    CH3    2   1.840   1.990  52.363
+  182ACE   HH32    3   1.887   1.953  52.453
+  182ACE   HH33    4   1.794   1.908  52.311
+  182ACE      C    5   1.735   2.093  52.399
+  182ACE      O    6   1.668   2.149  52.311
+  183GLY      N    7   1.714   2.123  52.523
+  183GLY      H    8   1.767   2.078  52.595</code></pre>
+</div>
+</div>
+</section>
+<section id="examples-1" class="slide level2">
+<h2>Examples</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1"></a><span class="fu">cat</span> ./data/collagen.pdb <span class="kw">|</span> <span class="fu">grep</span> <span class="st">'C   '</span> <span class="kw">|</span> <span class="fu">head</span> <span class="at">-3</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>ATOM      1  C   ACE A 182      17.346  20.931 523.990  1.00  0.00           C  
+ATOM      9  C   GLY A 183      16.525  23.179 526.689  1.00182.47           C  
+ATOM     13  C   PHE A 184      15.537  24.075 529.824  1.00187.13           C  </code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1"></a><span class="fu">cat</span> ./data/collagen.pdb <span class="kw">|</span> <span class="fu">grep</span> <span class="st">'C   '</span> <span class="kw">|</span> <span class="fu">wc</span> <span class="at">-l</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>26581</code></pre>
+</div>
+</div>
+</section>
+<section id="examples-2" class="slide level2">
+<h2>Examples</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb18-1"><a href="#cb18-1"></a><span class="ex">tldr</span> cut</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+  cut
+
+  Cut out fields from stdin or files.
+  More information: https://www.gnu.org/software/coreutils/cut.
+
+  - Cut out the first sixteen characters of each line of stdin:
+    cut -c 1-16
+
+  - Cut out the first sixteen characters of each line of the given files:
+    cut -c 1-16 file
+
+  - Cut out everything from the 3rd character to the end of each line:
+    cut -c 3-
+
+  - Cut out the fifth field of each line, using a colon as a field delimiter (default delimiter is tab):
+    cut -d':' -f5
+
+  - Cut out the 2nd and 10th fields of each line, using a semicolon as a delimiter:
+    cut -d';' -f2,10
+
+  - Cut out the fields 3 through to the end of each line, using a space as a delimiter:
+    cut -d' ' -f3-</code></pre>
+</div>
+</div>
+</section>
+<section id="examples-3" class="slide level2">
+<h2>Examples</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb20-1"><a href="#cb20-1"></a><span class="fu">cat</span> ./data/collagen.pdb <span class="kw">|</span> <span class="fu">tr</span> <span class="at">-s</span> <span class="st">' '</span> <span class="kw">|</span> <span class="fu">head</span> <span class="at">-3</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>ATOM 1 C ACE A 182 17.346 20.931 523.990 1.00 0.00 C 
+ATOM 2 O ACE A 182 16.682 21.494 523.109 1.00 0.00 O 
+ATOM 3 CH3 ACE A 182 18.396 19.900 523.635 1.00 0.00 C </code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb22-1"><a href="#cb22-1"></a><span class="fu">cat</span> ./data/collagen.pdb <span class="kw">|</span> <span class="fu">tr</span> <span class="at">-s</span> <span class="st">' '</span> <span class="kw">|</span> <span class="fu">cut</span> <span class="at">-d</span><span class="st">' '</span> <span class="at">-f3</span> <span class="kw">|</span> <span class="fu">head</span> <span class="at">-3</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>C
+O
+CH3</code></pre>
+</div>
+</div>
 </section></section>
 <section>
 <section id="resources" class="title-slide slide level1 center">
 <h1>Resources</h1>
 
 </section>
-<section id="resources-1" class="slide level2">
-<h2>Resources</h2>
+<section id="books-and-other-resources" class="slide level2">
+<h2>Books and other resources</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
 <ul>
-<li><a href="https://datascienceatthecommandline.com/2e/" class="uri">https://datascienceatthecommandline.com/2e/</a></li>
+<li><a href="https://datascienceatthecommandline.com/2e/">Data Science at the Command Line</a></li>
+<li><a href="https://missing.csail.mit.edu/">The Missing Semester</a></li>
 </ul>
-
-<img src="./www/hits-logo.png" class="slide-logo r-stretch"><div class="footer footer-default">
+</div><div class="column" style="width:50%;">
+<div class="flex">
+<p><img data-src="./img/2022-06-08-09-54-21.png" style="width:40.0%"></p>
+<p><span id="qrcode">Slides: <a href="https:/github.com/hits-mbm-dev/how-to-terminal">github.com/hits-mbm-dev/how-to-terminal</a></span></p>
+</div>
+</div>
+</div>
+<style>
+figcaption {
+    text-align: center;
+}
+</style>
+<script src="./www/qrcode.min.js"></script>
+<script type="text/javascript">
+let elem = document.getElementById("qrcode")
+new QRCode(elem, "https:/github.com/hits-mbm-dev/how-to-terminal");
+</script>
+<p><img src="./www/hits-logo.png" class="slide-logo"></p>
+<div class="footer footer-default">
 <p><a href="https://github.com/hits-mbm-dev/how-to-terminal" class="uri">https://github.com/hits-mbm-dev/how-to-terminal</a></p>
 </div>
 </section></section>
