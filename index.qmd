@@ -90,6 +90,18 @@ execute:
 :::
 :::
 
+# The Terminal
+
+## The Terminal
+
+We are allowed to have nice things.
+
+::: {.r-stack}
+![](img/2022-06-10-16-31-06.png){.fragment width=80%}
+
+![](img/2022-06-10-16-33-21.png){.fragment}
+:::
+
 # Demo: `tmux`
 
 # Demo: `nvim`
