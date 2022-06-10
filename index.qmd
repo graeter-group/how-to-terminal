@@ -25,7 +25,7 @@ format:
 favicon: ./www/hits-logo.png
 bibliography: ./references.bib
 nocite: ""
-engine: knitr
+engine: markdown
 execute:
   echo: true
 
@@ -44,6 +44,19 @@ execute:
 - Power
 - Remote working
 - Feel like a hacker when you don't need the mouse
+:::
+
+## The unix philosophy
+
+> "The Unix philosophy, originated by Ken Thompson, is a set of cultural norms and philosophical approaches to minimalist, modular software development."
+> \
+> --- <https://en.wikipedia.org/wiki/Unix_philosophy>
+
+::: {.incremental}
+1. Make each program do one thing well...
+2. Expect the output of every program to become the input to another...
+3. ...
+4. ...
 :::
 
 ## Agenda
