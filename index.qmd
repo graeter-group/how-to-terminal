@@ -25,7 +25,7 @@ format:
 favicon: ./www/hits-logo.png
 bibliography: ./references.bib
 nocite: ""
-engine: markdown
+engine: knitr
 execute:
   echo: true
 
