@@ -1,6 +1,6 @@
 ---
 title: "Wait, you can do that in a terminal?!"
-date: June 08, 2022
+date: June 15, 2022
 author: Jannik & Camilo
 institute: Heidelberg Institute for Theoretical Studies
 format:
