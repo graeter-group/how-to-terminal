@@ -104,7 +104,11 @@ We are allowed to have nice things.
 
 # Demo: `tmux`
 
+<https://github.com/jmbuhr/tmux-kickstarter>
+
 # Demo: `nvim`
+
+<https://github.com/jmbuhr/quarto-nvim-kickstarter>
 
 # ✨ Shell Magic ✨
 
